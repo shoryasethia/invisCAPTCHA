@@ -31,7 +31,7 @@ Theme: Smart Automation
 Ministry: Ministry of Electronics and Information Technology
 ```
 
-> Project Info Page : [https://shoryasethia.github.io/invisCAPTCHA/](https://shoryasethia.github.io/invisCAPTCHA/)
+> Dummy functional page : [https://shoryasethia.github.io/invisCAPTCHA/](https://shoryasethia.github.io/invisCAPTCHA/)
 
 > Brief Report : [here](https://github.com/shoryasethia/invisCAPTCHA/blob/main/46424-invisCaptcha-SIH-2024.pdf)
 
