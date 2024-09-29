@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIH24</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Garamond', serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <u><h1>SMART INDIA HACKATHON - 2024</h1></u>
+        <p></p>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="problem-id">Problem Statement ID</label>
+                <input type="text" id="problem-id" name="problem-id" value="1672" readonly>
+            </div>
+            <div class="form-group">
+                <label for="title">Problem Statement</label>
+                <input type="text" id="title" name="title" value="Develop a ML Model based solution to refine CAPTCHA" readonly>
+            </div>
+            <div class="form-group">
+                <label for="category">Category</label>
+                <input type="text" id="category" name="category" value="Software" readonly>
+            </div>
+            <div class="form-group">
+                <label for="theme">Theme</label>
+                <input type="text" id="theme" name="theme" value="Smart Automation" readonly>
+            </div>
+            <div class="form-group">
+                <label for="team-id">Team ID</label>
+                <input type="text" id="team-id" name="team-id" value="46424" readonly>
+            </div>
+            <div class="form-group">
+                <label for="team-name">Team Name</label>
+                <input type="text" id="team-name" name="team-name" value="invisCaptcha" readonly>
+            </div>
+            <div class="form-group">
+                <label for="organization">Organization</label>
+                <input type="text" id="organization" name="organization" value="Ministry of Electronics and Information Technology" readonly>
+            </div>
+            
+
+            <div class="captcha">
+                <div class="spinner">
+                    <label>
+                        <input type="checkbox" onclick="$(this).attr('disabled','disabled');">
+                        <span class="checkmark"><span>&nbsp;</span></span>
+                    </label>
+                </div>
+                <div class="text" style="font-family: 'Roboto', sans-serif;"> <!-- Uniform font -->
+                    I'm not a robot 
+                </div>
+                <div class="logo">
+                    <img src="logo.png" alt="invisCAPTCHA">
+                    <p>invisCAPTCHA</p>
+                    <small>Privacy - Terms</small>
+                </div>
+            </div>
+            
+
+            <p></p>
+            <div class="form-group">
+                <button type="button" onclick="window.location.href='https://sih.gov.in/sih2024PS';" class="btn">Submit</button>
+            </div>
+        </form>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
