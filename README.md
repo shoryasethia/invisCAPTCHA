@@ -21,6 +21,7 @@
 
 ```
 SIH-2024
+
 Team Name: invisCAPTCHA
 Team Id: 46424
 PS Id: 1672
@@ -29,6 +30,7 @@ Category: Software
 Theme: Smart Automation
 Ministry: Ministry of Electronics and Information Technology
 ```
+
 > Project Info Page : [https://shoryasethia.github.io/invisCAPTCHA/](https://shoryasethia.github.io/invisCAPTCHA/)
 
 > Brief Report : [here](https://github.com/shoryasethia/invisCAPTCHA/blob/main/46424-invisCaptcha-SIH-2024.pdf)
@@ -39,3 +41,8 @@ Updates :
  2. National Round : in progress
  3. Final Round : --
 ```
+### License
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/shoryasethia/invisCAPTCHA/blob/main/LICENSE) file for details.
+
+### Contact
+For any inquiries, please contact the [shoryasethia4may@gmail.com](mailto:shoryasethia4may@gmail.com)
