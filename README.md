@@ -99,3 +99,8 @@ This project is licensed under the MIT License. See the [LICENSE](https://github
 
 ### Contact
 For any inquiries, please contact the [shoryasethia4may@gmail.com](mailto:shoryasethia4may@gmail.com)
+___________________________________________
+![Views](https://komarev.com/ghpvc/?username=shoryasethia&color=blue&style=flat)
+![GitHub Stars](https://img.shields.io/github/stars/shoryasethia/invisCAPTCHA?style=social)
+![GitHub Forks](https://img.shields.io/github/forks/shoryasethia/invisCAPTCHA?style=social)
+
