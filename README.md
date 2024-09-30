@@ -1,23 +1,10 @@
-# invisCAPTCHA
-### Passive Captcha Defense: Behavioural Analytics and Honeypot Traps with Advanced ML Models for Bot Detection
-* Tired of proving to every website that that you’re not a bot? We are here to help you out.
-* Traditional CAPTCHA methods often require users to solve trivial puzzles or repeatedly identify objects like fire hydrants or traffic
- lights. To tackle this, we introduce a new technique that uses ML and statistical methods to eliminate the need of direct user
- interaction. This involves 2 checks 
+<h1 align="center">
+  <a href="https://youtu.be/0U8CVJhdZMk">invisCAPTCHA</a>
+</h1>
 
-  1. Honeypot and HTTP methods act as a Primary Check. HTTP methods employ a two-stage
- classifier. Firstly, a Neural Network estimates the probability of each request being bot generated.
- Then, the Discrete Time Markov Chains classify the user to be bot or human.
-  2. Secondary Check exploit Behavioural features (mouse & keyboard logs). These logs are
- continously fed to a LSTM model hosted at the backend. If the final output score obtained, is below
- the threshold, the user is prompted to resort to traditional CAPTCHA method.
- 
-* All these solutions work in tandem to allow user to do minimal effort to prove that (s)he is not a bot. All these processes run,
- without the user even being aware. The  user is required to engage only when a suspicious behaviour is detected.
-* We combine all these methods to come up with a Passive Captcha mechanism. And we also include a HoneyPot test, where we
- lure the bot into a trap which is visible only to a bot. And once a bot falls in that trap, we know for sure it’s a bot.
-* We uniquely combine all these methods to eliminate most of the bots, which would have thereby escaped in the case of a single
- test
+<p align="center">
+  <img src="https://github.com/shoryasethia/invisCAPTCHA/blob/main/invisCAPTCHA.png" alt="invisCAPTCHA">
+</p>
 
 ```
 SIH-2024
@@ -30,10 +17,76 @@ Category: Software
 Theme: Smart Automation
 Ministry: Ministry of Electronics and Information Technology
 ```
+### Passive Captcha Defense: Behavioral Analytics and Honeypot Traps with Advanced ML for Bot Detection
 
-> Dummy functional page : [https://shoryasethia.github.io/invisCAPTCHA/](https://shoryasethia.github.io/invisCAPTCHA/)
+### Introduction
+Are you tired of proving to every website that you are not a bot or having an identity crisis when it classifies you as a nefarious bot? Are you tired of clicking the never-ending barrage of fire-hydrants? Then we have the perfect solution for you: a State-of-the-Art passive CAPTCHA detection system - **InvisCAPTCHA**.
+
+### Problem Statement
+To develop a complete ML-based solution to refine traditional CAPTCHA methods.
+
+Traditional CAPTCHA-based methods rely heavily on user intervention to discriminate the agent as a human or a bot. This is done to protect the limited resources of the server and prevent all the backend APIs from DOS/DDOS-based attacks. In recent times, while the core CAPTCHA technology has remained the same, attacks have become more evolved and sophisticated. Hackers are now exploiting systems protected by CAPTCHA using bots that imitate human behavior or have become smart enough to recognize those optically distorted characters.
+
+While some new solutions exist, like Cloudflare’s Turnstile or Google’s reCAPTCHA, such services are generally expensive for commercial use.
+
+### Objectives
+Given the number of users that UIDAI caters to and the per-session costs of third-party CAPTCHA solutions, it is necessary to develop an in-house solution which is both:
+1. More secure than traditional CAPTCHA.
+2. Requires no/minimal user intervention – Passive implementation.
+3. Has minimal overhead of the ML model implemented, to reduce latency and implementation costs.
+
+### Proposed Solution
+**InvisCAPTCHA** combines ML methods, statistical techniques like Markov Chains, and "honeypot traps" to efficiently classify user agents. A key differentiator is our use of both parallel and serial models in a multi-level architecture consisting of primary and secondary checks. This greatly improves system efficiency and reduces latency. A detailed summary of our approach is described below:
+
+#### Implementation
+**InvisCAPTCHA** uses two different models running in parallel to assign a "user_score" to the agent, segmented into two levels: **Primary** and **Secondary**.
+
+As soon as the score crosses a predetermined threshold (T_H and T_L), the agent is classified as a bot or a human. If classified as a bot, the user is prompted to try again by refreshing the page. If the model cannot determine (the score is between T_H and T_L), the user is redirected to a traditional image-based CAPTCHA for identification.
+
+#### 1. Primary Level
+This level consists of **honeypot checks** and a **neural-net based on HTTP methods**. Both pipelines run in parallel and update a global user_score.
+
+- **(a) Honeypot Checks:** These are fake web elements embedded in the UI to fool bots into interacting with them. They are composed of multiple layers:
+    - Surface traps like hidden fields and invisible links, visible to bots but invisible to human users.
+    - Behavioral traps like fake AJAX calls that simulate dynamic content updates.
+    - Logic traps like decoy API endpoints with realistic but non-functional responses. All these checks run simultaneously and classify user agents deterministically.
+  
+- **(b) HTTP Methods:** This consists of a partially pre-trained neural network that analyzes HTTP requests made by the client and predicts bot probability. The model updates based on real-time requests and internally implements a state-based approach to create a DTMC (Discrete Time Markov Chain).
+
+#### 2. Secondary Level
+This level consists of a state-of-the-art LSTM model based on behavioral inputs like mouse movements and keyboard logs during the user's login session. The model is pre-trained on a combination of publicly available datasets and synthetically created data. Other architectures like LightGBM (a Gradient Boosting Decision Tree) were considered for deployment efficiency at the cost of slightly reduced performance.
+
+### Expected Outcomes
+During preliminary testing on a limited test dataset, the secondary level model achieved an accuracy exceeding 99%. We plan to conduct further testing on more comprehensive real-world data to refine the model. To counter rapidly evolving bots, we aim to implement “dynamic honeypot traps,” which will learn from bot behavior and update trap placement.
+
+### Conclusion
+In a world where bots and adversarial techniques are constantly evolving, we need a system that can evolve in response. **InvisCAPTCHA** uses a multi-layered architecture of different techniques to counter various types of attacks. Its comprehensive pipelined structure makes it adaptable for future needs and easily integrable with the existing UIDAI system.
+
+### Main Problem
+Traditional CAPTCHA-based methods rely on user intervention, which burdens users and is less effective against evolving bot technologies. Given the scale and costs associated with using third-party CAPTCHA services, an in-house solution is necessary for UIDAI that is both secure and passive, minimizing user interaction.
+
+A solution combining ML methods with statistical techniques and honeypot traps is proposed. Our key innovation is the use of both parallel and serial models in a multi-level architecture, significantly increasing efficiency while reducing latency.
+
+### Approach
+**InvisCAPTCHA** assigns a “user_score” to the agent via two parallel models, with the process divided into Primary and Secondary levels. Based on the score, agents are classified as human or bot, with uncertain cases routed to traditional CAPTCHA for further verification.
+
+- **Primary Level:**
+    - Honeypot Checks: Fake elements fool bots.
+    - HTTP Methods: Neural network analyzes HTTP requests using a state-based approach.
+
+- **Secondary Level:**
+    - Behavioral analysis using LSTM, trained on a mix of real and synthetic data.
+
+### Expected Outcomes:
+Preliminary results show over 99% accuracy, with plans to test on broader datasets and implement dynamic honeypot traps for better bot detection in the future.
+
+
+__________________________________________
+> Team info page : [https://shoryasethia.github.io/invisCAPTCHA/](https://shoryasethia.github.io/invisCAPTCHA/)
 
 > Brief Report : [here](https://github.com/shoryasethia/invisCAPTCHA/blob/main/46424-invisCaptcha-SIH-2024.pdf)
+
+> invisCAPTCHA's dummy functionality : [here](https://youtu.be/0U8CVJhdZMk)
 
 ```
 Updates :
