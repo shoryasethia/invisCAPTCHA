@@ -94,12 +94,6 @@ __________________________________________
 
 > invisCAPTCHA's dummy functionality : [here](https://youtu.be/0U8CVJhdZMk)
 
-```
-Updates :
- 1. Institutional Round : Cleared Internal Hackathon at IIT Bombay
- 2. National Round : in progress
- 3. Final Round : --
-```
 ### License
 This project is licensed under the MIT License. See the [LICENSE](https://github.com/shoryasethia/invisCAPTCHA/blob/main/LICENSE) file for details.
 
