@@ -12,17 +12,6 @@
   <img src="https://img.shields.io/github/forks/shoryasethia/invisCAPTCHA?style=social" alt="GitHub Forks" />
 </p>
 
-```
-SIH-2024
-
-Team Name: invisCAPTCHA
-Team Id: 46424
-PS Id: 1672
-PS: Develop a ML based solution to refine captcha
-Category: Software
-Theme: Smart Automation
-Ministry: Ministry of Electronics and Information Technology
-```
 ### Passive Captcha Defense: Behavioral Analytics and Honeypot Traps with Advanced ML for Bot Detection
 
 ### Introduction
