@@ -15,7 +15,7 @@
 ### Passive Captcha Defense: Behavioral Analytics and Honeypot Traps with Advanced ML for Bot Detection
 
 ### Introduction
-Are you tired of proving to every website that you are not a bot or having an identity crisis when it classifies you as a nefarious bot? Are you tired of clicking the never-ending barrage of fire-hydrants? Then we have the perfect solution for you: a State-of-the-Art passive CAPTCHA detection system - **InvisCAPTCHA**.
+Are you tired of proving to every website that you are not a bot but a living human or having an identity crisis when it classifies you as a nefarious bot? Are you tired of clicking the never-ending barrage of fire-hydrants? Then we have the perfect solution for you: a State-of-the-Art passive CAPTCHA detection system - **InvisCAPTCHA**.
 
 ### Problem Statement
 To develop a complete ML-based solution to refine traditional CAPTCHA methods.
